@@ -1,179 +1,146 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Controle de Equipamentos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  </head>
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
+  rel="stylesheet"
+/> 
+
+ </head>
   <body>
-  
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-md">
+    <a class="navbar-brand" href="#">Sistema de Controle de Motores</a>
+  </div>
+</nav>
+
+<div class='container mt-4'>
 
 
+<div class="row">
+<div class="col">
 
-
-
-<form class="container d-flex justify-content-center flex-column " id="formMotor">
- <h1>Cadastro de motor</h1>
-<div class="form-group col-md-4">
- <label for="inputEstado" class="form-label">Fabricante</label>
-      <select id="inputMarca" class="form-control">
-        <option selected>WEG</option>
-        <option>SEW</option>
-      </select>
+<div class="small-box bg-info">
+<div class="inner">
+<h3 id="motorCadastrado">0</h3>
+<p>Motores Cadastrados</p>
+</div>
+<div class="icon">
+<i class="ion ion-bag"></i>
+</div>
+<a href="tabelaGeral.html" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+</div>
 </div>
 
-<div class="form-outline">
- <label for="inputEstado" class="form-label">Potênciaa</label>
-      <select id="inputPotencia" class="form-control">
-         <option selected></option>
-      </select>
+<div class="col">
+
+<div class="small-box bg-info">
+<div class="inner">
+<h3 id="motorAlmox">0</h3>
+<p>Motores Almox</p>
+</div>
+<div class="icon">
+<i class="ion ion-bag"></i>
+</div>
+<a href="tabelaAlmox.html" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+</div>
 </div>
 
-<div class="form-group col-md-4">
-      <label for="inputEstado" class="form-label">Polos</label>
-      <select id="inputPolo" class="form-control">
-        <option selected></option>
-	<option >2 POLOS</option>
-        <option>4 POLOS</option>
-	<option>6 POLOS</option>
-	<option>8 POLOS</option>
-	<option>10 POLOS</option>
-	<option>12 POLOS</option>
-      </select>
+<div class="col">
 
+<div class="small-box bg-success">
+<div class="inner">
+<h3 id="motorTotal">0<sup style="font-size: 20px">un</sup></h3>
+<p>Total Motores</p>
 </div>
-
-<div class="form-outline">
- <label for="inputEstado" class="form-label">Carcaça</label>
-      <select id="inputCarcaca" class="form-control">
-         <option selected></option>
-      </select>
+<div class="icon">
+<i class="ion ion-stats-bars"></i>
 </div>
-
-
-
-
-<div class="form-outline">
-
- <label for="inputEstado" class="form-label">Flange</label>
-      <select id="inputFlange" class="form-control">
-        <option selected>SIM</option>
-        <option>NÃO</option>
-      </select>
+<a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+</div>
 </div>
 
 
-<div class="form-outline">
- <label for="inputEstado" class="form-label">Tipo Flange</label>
-      <select id="inputModFlange" class="form-control">
-         <option selected></option>
-      </select>
 </div>
- 
-
- <div class="form-outline">
-      <label class="form-label" for="form8Example3">Cod EMS</label>
-      <input type="text" id="inputCodEMS" class="form-control" />
- </div>  
-
- <div class="form-outline">
-      <label class="form-label" for="form8Example3">Rolamento Polia</label>
-      <input type="text" id="inputRolPol" class="form-control" />
- </div>  
-
- <div class="form-outline">
-      <label class="form-label" for="form8Example3">Rolamento ventoinha</label>
-      <input type="text" id="inputRolVen"  class="form-control" />
- </div> 
-
- <div class="form-outline">
-      <label class="form-label" for="form8Example3">Tensão</label>
-      <input type="text" id="inputTensao" class="form-control" />
- </div>  
-
- <div class="form-outline">
-      <label class="form-label" for="form8Example3">Corrente</label>
-      <input type="text" id="inputCorrente"  class="form-control" />
- </div>  
-
-
-
-<div class="form-outline">
- <label for="inputEstado" class="form-label">Tipo</label>
-      <select id="inputTipo" class="form-control">
-        <option selected>MOTOR</option>
-        <option>MOTOVIBRADOR</option>
-      </select>
 </div>
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
 
-
- <button type="submit" class="btn btn-primary m-3">Entrar</button>
-
-
-  
-
-</form>
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
+ <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="./scripts/client.js"></script>
 
 <script>
 
-tipos = [  {    "tipo": "63"  },  {    "tipo": "71"  },  {    "tipo": "80"  },  {    "tipo": "L80"  },  {    "tipo": "90S"  },  {    "tipo": "L90S"  },  {    "tipo": "90L"  },  {    "tipo": "L90L"  },  {    "tipo": "100L"  },  {    "tipo": "L100L"  },  {    "tipo": "112M"  },  {    "tipo": "L112M"  },  {    "tipo": "132S"  },  {    "tipo": "132M"  },  {    "tipo": "132M/L"  },  {    "tipo": "160M"  },  {    "tipo": "160L"  },  {    "tipo": "180M"  },  {    "tipo": "180L"  },  {    "tipo": "200M"  },  {    "tipo": "200L"  },  {    "tipo": "225S/M"  },  {    "tipo": "250S/M"  },  {    "tipo": "280S/M"  },  {    "tipo": "355M/L"  },  {    "tipo": "355A/B"  }]
-formulario = document.getElementById('formMotor');
-formOptionCarcaca = formulario.inputCarcaca ;
-formoptionFlange =formulario.inputModFlange ;
-formoptionPotencia = formulario.inputPotencia;
 
-flanges = [{"tipo": "FF-115"  },  {    "tipo": "FF-130"  },  {    "tipo": "FF-165"  },  {    "tipo": "FF-215"  },  {    "tipo": "FF-265"  },  {    "tipo": "FF-300"  },  {    "tipo": "FF350"  },  {    "tipo": "FF-400"  },  {    "tipo": "FF-500"  },  {    "tipo": "FF-600"  },  {    "tipo": "FF-740"  },  {    "tipo": "FC-95"  },  {    "tipo": "FC-149"  },  {    "tipo": "FC-184"  },  {    "tipo": "FC-228"  },  {    "tipo": "FC-279"  },  {    "tipo": "FC-335"  },  {    "tipo": "FC-368"  },  {    "tipo": "C-90"  },  {    "tipo": "C-105"  },  {    "tipo": "C-120"  },  {    "tipo": "C-140"  },  {    "tipo": "C-160"  },  {    "tipo": "C-200"  }]
+let painelArea = document.getElementById('motorCadastrado');
+let painelAlmox = document.getElementById('motorAlmox');
+let painelTotal = document.getElementById('motorTotal');
 
-potencias = [{"tipo": "0.12 CV"},{"tipo": "0.16 CV"},{"tipo": "0.25 CV"},{"tipo": "0.33CV"},{"tipo": "0.50 CV"},{"tipo": "0.75 CV"},{"tipo": "1 CV"},{"tipo": "1.5 CV"}, {    "tipo": "2 CV"  },  {    "tipo": "3 CV"  },  {    "tipo": "4 CV"  },  {    "tipo": "5 CV"  },  {    "tipo": "6 CV"  },  {    "tipo": "7.5 CV"  },  {    "tipo": "10 CV"  },  {    "tipo": "12.5 CV"  },  {    "tipo": "15 CV"  },  {    "tipo": "20 CV"  },  {    "tipo": "25 CV"  },  {    "tipo": "30 CV"  },  {    "tipo": "40 CV"  },  {    "tipo": "50 CV"  },  {    "tipo": "60 CV"  },  {    "tipo": "75 CV"  },  {    "tipo": "100 CV"  },  {    "tipo": "125 CV"  },  {    "tipo": "150 CV"  },  {    "tipo": "175 CV"  },  {    "tipo": "200 CV"  },  {    "tipo": "250 CV"  },  {    "tipo": "300 CV"  },  {    "tipo": "350 CV"  },  {    "tipo": "400 CV"  }]
+let total = 0 ;
 
-console.log(tipos);
+let motorArea = 0 ;
+let motorAlmox = 0 ;
 
-tipos.map((item)=>{
-//console.log(item.tipo);
-formOptionCarcaca.options[formOptionCarcaca.options.length] = new Option(item.tipo, item.tipo);
-});
+async function loadData() {
+    const { data, error } = await _supabase
+        .from('motores2')
+        .select()
+if(!error){
 
+motorArea  = data.length ;
+console.log(motorArea);
+painelArea.innerHTML = motorArea;
 
-flanges.map((item)=>{
-//console.log(item.tipo);
-formoptionFlange .options[formoptionFlange.options.length] = new Option(item.tipo, item.tipo);
-});
-
-
-potencias.map((item)=>{
-//console.log(item.tipo);
-formoptionPotencia.options[formoptionPotencia.options.length] = new Option(item.tipo, item.tipo);
-});
+}
 
 
+}
 
-formulario.addEventListener("submit",(e)=>{
+async function loadData1() {
+    const { data, error } = await _supabase
+        .from('motoresAlmox')
+        .select()
+if(!error){
 
-e.preventDefault();
+motorAlmox = data.length ;
+console.log("ok");
+painelAlmox.innerHTML = motorAlmox ;
+total = motorArea + motorAlmox ;
 
-marca = formulario.inputTipo.value ;
-potencia = formulario.inputPotencia.value;
-polos = formulario.inputPolo.value;
-carcaca = formulario.inputCarcaca.value;
-flange = formulario.inputFlange.value;
-
-
-console.log(carcaca );
-
-})
-
-
-	
-	
-	
+painelTotal.innerHTML = total ;
+}
 
 
 
 
 
+}
 
+
+
+
+loadData();
+loadData1();
 
 
 
@@ -181,6 +148,9 @@ console.log(carcaca );
 </script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+
+
+
   </body>
 </html>
