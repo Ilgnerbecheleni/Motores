@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabela Motores</title>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+            />
+
+        <link rel="stylesheet" href="./styles/style.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css">
+<style>
+
+.atualiza{
+background:none;
+color:black;
+border:none;
+}
+</style>
+    </head>
+    <body>
+       <h1>Tabela Motores</h1>
+<div class="container d-flex justify-content-between"><a href="index.html" class="btn btn-primary">Voltar</a><a href="formularioAlmox.html" class="btn btn-danger">Cadastrar</a></div>
+       <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Marca</th>
+                <th>Potencia</th>
+                <th>Polos</th>
+                <th>Carcaça</th>
+                <th>Flange</th>
+		<th>Modelo Flange</th>
+                <th>Localização</th>
+                <th>Rolamento D</th>
+                <th>Rolamento T</th>
+                <th>Tensão</th>
+                <th>Corrente</th>
+                <th>Tipo</th>
+                <th ><button id="refresh" class="atualiza"><i class="fa-solid fa-arrows-rotate"></i></button>
+
+            </tr>
+        </thead>
+        <tbody id="holder">
+     
+        </tbody>
+
+        </table>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap4.min.js"></script>
+
+        <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <script src="./scripts/client.js"></script>
+        <script src="./scripts/scriptAlmox.js"></script>
+
+<script>
+setTimeout(() => {
+ $(document).ready(function () {
+    $('#example').DataTable();
+});
+}, 1000)
+
+
+</script>
+    </body>
+</html>
